@@ -26,22 +26,23 @@ Generate Data: MATLAB_Rimless_Wheel\generate_data\generate_data_3_spoke.m
 
 Create Koopman Model: Python_Rimless_Wheel\make_model\make_cck_model.py or Python_Rimless_Wheel\make_model\make_dmdc_model.py
 
-- Uses premade dataset to generate either a CCK or DMDc model
+- Uses premade dataset(s) to generate either a CCK or DMDc model
 
 - Outputs model data to "Data_Rimless_Wheel\koopman_models"
 
 
 Main Result: Python_Rimless_Wheel/rimless_wheel_simulation.py
 
-- Uses premade CCK model (with embedding compensation) to control a rimless wheel that is initialized on the reference trajectory. 
-
-- Change the model type (CCK, DMDc, LL) on line 389. Turn off/on embedding compensation on line 390
-
-- Can also change the time horizon (line 369), total simulation length (line 356), initial condition (line 391 and line 454)
+- Uses premade CCK model (with embedding compensation) to control a rimless wheel that is initialized on the reference trajectory. States are plotted for the simulation.
 
 - Script saves simulation data to "Data_Rimless_Wheel\sim_results". If nothing is changed, output files "XXXX.csv" should match files labeled "XXXX_expected_result.csv"
 
 - Time on my machine: 4.9 min
+
+- Can change the model type (CCK, DMDc, LL) on line 389. Turn off/on embedding compensation on line 390
+
+- Can also change the time horizon (line 369), total simulation length (line 356), initial condition (line 391 and line 454), etc.
+
 
 
 Animate Results: MATLAB_Rimless_Wheel\animate\animate_from_plot.m
@@ -57,20 +58,23 @@ Cart-Pole Simulation:
 
 - Please refer to the README in the "MATLAB_Cart-Pole_Walls" folder
 
+## Install Time
+
+Can range from a few minutes to an hour. Obtaining the license for Gurobi may take some time, but the installation is quick. However, a MATLAB install will take an hour.
 
 ## Version Information
 
-MATLAB				23.2.0.2428915 (R2023b)
-Control System Toolbox		Version 23.2
-Symbolic Math Toolbox		Version 23.2
+- MATLAB -- 23.2.0.2428915 (R2023b)
+- Control System Toolbox -- Version 23.2
+- Symbolic Math Toolbox -- Version 23.2
 
-python 				3.10.12
-pandas 				1.5.3
-numpy				1.26.3
-scipy 				1.11.4
-gurobipy 			11.0.1
-matplotlib 			3.8.2
-sklearn 			1.4.0
+- python -- 3.10.12
+- pandas -- 1.5.3
+- numpy -- 1.26.3
+- scipy -- 1.11.4
+- gurobipy -- 11.0.1
+- matplotlib -- 3.8.2
+- sklearn -- 1.4.0
 
 Operating System: Linux (WSL2 on Windows 11 Version 25H2) 
 Kernel: 6.6.87.2-microsoft-standard-WSL2
