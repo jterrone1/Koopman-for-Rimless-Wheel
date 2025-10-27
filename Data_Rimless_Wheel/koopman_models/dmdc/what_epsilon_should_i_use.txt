@@ -1,0 +1,3 @@
+for A_2000_pass_act_tb_LA36_0.01dt_CCK:
+
+epsilon = 1.5

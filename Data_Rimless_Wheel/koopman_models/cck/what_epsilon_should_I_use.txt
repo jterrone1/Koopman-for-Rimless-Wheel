@@ -1,0 +1,2 @@
+for A_2000_pass_tb_LA36_0.01dt.npy:
+epsilon = 2.0
