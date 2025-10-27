@@ -58,6 +58,14 @@ Cart-Pole Simulation:
 
 - Please refer to the README in the "MATLAB_Cart-Pole_Walls" folder
 
+## Reproduce Results
+
+- To generate the data used in Movie 1, set the time horizon to N = 20 (on line 369), total simulation time to tf = 20 (on line 356), and the intialization to "stance" (on line 391). Make sure model_type =  "CCK" and embedding_compensation = 1
+
+- To generate the data used in Figure 3, set the time horizon to N = 20 (on line 369), total simulation time to tf = 20 (on line 356), the intialization to "trajectory" (on line 391) and the start_val = 31 (on line 454). Make sure model_type =  "CCK" and embedding_compensation = 1
+
+- To generate the data sets used in Figure 4, vary the model type (on line 389), turn on/off the embedding compensation term (line 390), set the time horizon to N = 20 (on line 369), total simulation time to tf = 20 (on line 356), the intialization to "trajectory" (on line 391) and use a start_val in {6, 11, 16, 21, 26, 31, 36, 41, 46, 51} (on line 454) 
+
 ## Install Time
 
 Can range from a few minutes to an hour. Obtaining the license for Gurobi may take some time, but the installation is quick. However, a MATLAB install will take an hour.
