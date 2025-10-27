@@ -14,49 +14,48 @@ The code is structured into four folders:
 
 ## How to Use
 
-Recommended to go to main result (Python_Rimless_Wheel/rimless_wheel_simulation.py) to see K-MPC controlling the Rimless Wheel
+Recommended to go to Main Result (Python_Rimless_Wheel/rimless_wheel_simulation.py) to see K-MPC controlling the Rimless Wheel
 
 
 Generate Data: MATLAB_Rimless_Wheel\generate_data\generate_data_3_spoke.m
 
-Creates nonlinear simulation data of the Rimless Wheel (only three actuated spokes)
+- Creates nonlinear simulation data of the Rimless Wheel (only three actuated spokes)
 
-Outputs data files to "Data_Rimless_Wheel\training"
+- Outputs data files to "Data_Rimless_Wheel\training"
 
 
 Create Koopman Model: Python_Rimless_Wheel\make_model\make_cck_model.py or Python_Rimless_Wheel\make_model\make_dmdc_model.py
 
-Uses premade dataset to generate either a CCK or DMDc model
+- Uses premade dataset to generate either a CCK or DMDc model
 
-Outputs model data to "Data_Rimless_Wheel\koopman_models"
+- Outputs model data to "Data_Rimless_Wheel\koopman_models"
 
 
 Main Result: Python_Rimless_Wheel/rimless_wheel_simulation.py
 
-Uses premade CCK model (with embedding compensation) to control a rimless wheel that is initialized on the reference trajectory. 
+- Uses premade CCK model (with embedding compensation) to control a rimless wheel that is initialized on the reference trajectory. 
 
-Change the model type (CCK, DMDc, LL) on line 389. Turn off/on embedding compensation on line 390
+- Change the model type (CCK, DMDc, LL) on line 389. Turn off/on embedding compensation on line 390
 
-Can also change the time horizon (line 369), total simulation length (line 356), initial condition (line 391 and line 454)
+- Can also change the time horizon (line 369), total simulation length (line 356), initial condition (line 391 and line 454)
 
-Script saves simulation data to "Data_Rimless_Wheel\sim_results". If nothing is changed, output files "XXXX.csv" should match files labeled "XXXX_expected_result.csv"
+- Script saves simulation data to "Data_Rimless_Wheel\sim_results". If nothing is changed, output files "XXXX.csv" should match files labeled "XXXX_expected_result.csv"
 
-Time on my machine: 4.9 min
+- Time on my machine: 4.9 min
 
 
 Animate Results: MATLAB_Rimless_Wheel\animate\animate_from_plot.m
 
-Simple animation of simulation data "Data_Rimless_Wheel\sim_results\z_out"
+- Simple animation of simulation data "Data_Rimless_Wheel\sim_results\z_out"
 
-Currently plots premade data of CCK (with embedding compensation, N = 20, tf = 20, trial 31)
+- Currently plots premade data of CCK (with embedding compensation, N = 20, tf = 20, trial 31)
 
-Saves video as MP4. If nothing is changed, output video should look identical to "expected_animation_output.mp4"
+- Saves video as MP4. If nothing is changed, output video should look identical to "expected_animation_output.mp4"
 
 
 Cart-Pole Simulation:
 
-Please refer to the README in the "MATLAB_Cart-Pole_Walls" folder
-
+- Please refer to the README in the "MATLAB_Cart-Pole_Walls" folder
 
 
 ## Version Information
